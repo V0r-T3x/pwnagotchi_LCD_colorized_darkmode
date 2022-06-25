@@ -1,15 +1,9 @@
-main.name = "PwnZ2K"
+main.name = "Pwnagotchi"
 main.lang = "en"
 main.whitelist = []
 main.plugins.grid.enabled = true
 main.plugins.grid.report = true
-main.plugins.grid.exclude = [
- "LAN Archie!!!",
- "CRYOS_LAN",
- "CRYOS_PHONE",
- "CRYOS_GUEST",
- "Réseau Wi-Fi de Louise Lamarche",
-]
+main.plugins.grid.exclude = []
 
 main.plugins.auto-update.enabled = true
 main.plugins.auto-update.install = true
