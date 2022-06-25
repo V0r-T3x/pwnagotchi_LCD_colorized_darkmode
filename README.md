@@ -33,7 +33,7 @@ Sometimes when their is no background image, I got a minor error on boot, but I 
 /usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/web/static/css/style.css  
 ```
   
-- options inside the /etc/pwnagotchi/config.toml  
+- options inside the /etc/pwnagotchi/config.toml  (I added my config.toml to have the base of my plugins and options activated)
 ```
 ui.display.enabled = true
 ui.display.type = "lcdhat"
@@ -67,7 +67,8 @@ main.plugins.crack_house.display_stats = true
 
 inside: /usr/local/lib/python3.7/dist-packages/pwnagotchi/plugins/default/  
 memtemp.py  
-  
+bt-tether.py  
+
 inside: your custom plugins folder (mine: /home/pi/plugins/)  
 clock.py  
 crack_house.py or display-password.py  
