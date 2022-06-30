@@ -122,7 +122,7 @@ class View(object):
         while True:
             try:
                 name = self._state.get('name')
-                self.set('name', name.rstrip('█').strip() if '█' in name else (name + ' █'))
+                self.set('name', name.rstrip('â–ˆ').strip() if 'â–ˆ' in name else (name + ' â–ˆ'))
                 self.update()
             except Exception as e:
                 logging.warning("non fatal error while updating view: %s" % e)
@@ -197,8 +197,8 @@ class View(object):
             else:
                 num_bars = 1
 
-            name = '▌' * num_bars
-            name += '│' * (4 - num_bars)
+            name = 'â–Œ' * num_bars
+            name += 'â”‚' * (4 - num_bars)
             name += ' %s %d (%d)' % (peer.name(), peer.pwnd_run(), peer.pwnd_total())
 
             if num_total > 1:
@@ -378,7 +378,10 @@ class View(object):
                 if pwnagotchi.config['ui']['display']['bg']:
 #                    logging.info(pwnagotchi.config['ui']['display']['bg_path'])
                     self._canvas = Image.open(pwnagotchi.config['ui']['display']['bg_path'])
-                    self._canvas = self._canvas.convert('L')
+                    if pwnagotchi.config['ui']['display']['hi-res']:
+                        self._canvas = self._canvas.convert('P')
+                    else:
+                        self._canvas = self._canvas.convert('1')
                 else:
                     self._canvas = Image.new('1', (self._width, self._height), WHITE)
                 
