@@ -1,7 +1,7 @@
 # pwnagotchi_LCD_colorized_darkmode
 This is a mod to change the LCD and web UI of a pwnagotchi with a colorized dark mode
 
-Colorized darkmode for the Pwnagotchi with a 1.33" LCD waveshare ST7789V hat  
+Colorized darkmode for the Pwnagotchi with a 1.33" LCD waveshare ST7789V hat & soon it will manage the ST7735S 1.44 
 --------------
   
 You need to activate the waveshare LCDHAT display on the pwnagotchi.  
@@ -19,9 +19,13 @@ Sometimes when their is no background image, I got a minor error on boot, but I 
 ```
 /usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/view.py  
 ```
-- change for the darkmode of LCD screen  
+- change for the darkmode of LCD screen  (for ST7789)
 ```
 /usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/hw/libs/waveshare/lcdhat/epd.py  
+```
+-change for darkmode of LCD screen (for ST7735S)
+```
+/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/hw/libs/waveshare/lcdhat144/epd.py
 ```
 - change for darkmode of web UI  
 ```
