@@ -38,6 +38,10 @@ Sometimes when their is no background image, I got a minor error on boot, but I 
 ```
   
 - options inside the /etc/pwnagotchi/config.toml  (I added my config.toml to have the base of my plugins and options activated)
+- 3 images are available for test,
+   - ui-bg-w.png is for the 1.33
+   - ui-bg-w-s.png is for the 1.44 "hi-resolution"
+   - ui-bg-w-s-1.png is for the 1.44 "low-resolution"
 ```
 ui.display.enabled = true
 ui.display.type = "lcdhat"
@@ -46,6 +50,7 @@ ui.display.rotation = 0
 ui.display.darkmode = true
 ui.display.bg = true
 ui.display.bg_path = "/home/pi/img/ui-bg-w.png"
+ui.display.hi-res = true
 
 #if you use the crack_house.py:
 main.plugins.crack_house.enabled = true
