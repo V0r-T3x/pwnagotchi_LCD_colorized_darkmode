@@ -147,6 +147,7 @@ ui.display.rotation = 0
 ui.display.darkmode = true
 ui.display.bg = true
 ui.display.bg_path = "/home/pi/img/ui-bg-w.png"
+ui.display.hi-res = true
 
 ui.web.enabled = true
 ui.web.address = "0.0.0.0"
