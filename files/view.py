@@ -379,7 +379,10 @@ class View(object):
 #                    logging.info(pwnagotchi.config['ui']['display']['bg_path'])
                     self._canvas = Image.open(pwnagotchi.config['ui']['display']['bg_path'])
                     if pwnagotchi.config['ui']['display']['hi-res']:
-                        self._canvas = self._canvas.convert('P')
+                        if pwnagotchi.config['ui']['display']['type'] == "displayhatmini":
+                            self._canvas = self._canvas.convert('RGBA')
+                        else:
+                            self._canvas = self._canvas.convert('P')
                     else:
                         self._canvas = self._canvas.convert('1')
                 else:
